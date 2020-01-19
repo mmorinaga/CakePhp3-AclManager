@@ -1,19 +1,19 @@
 {
-    "name": "jcpires/cakephp3-aclmanager",
+    "name": "mmorinaga/cakephp3-aclmanager",
     "type": "cakephp-plugin",
     "keywords": ["cakephp", "cake3", "plugin", "acl"],
-    "homepage": "https://github.com/JcPires/CakePhp3-AclManager",
+    "homepage": "https://github.com/mmorinaga/CakePhp3-AclManager",
     "description": "An acl-manager plugin for CakePhp3",
     "authors": [
         {
-            "name": "Jean-Christophe Pires",
-            "email": "djyss@live.fr",
-            "homepage": "https://github.com/JcPires"
+            "name": "masato morinaga",
+            "email": "masato.morinaga@gmail.com",
+            "homepage": "https://github.com/mmorinaga"
         }
     ],
     "require": {
         "php": ">=5.4.16",
-        "cakephp/cakephp": "~3.0",
+        "cakephp/cakephp": "~3.4",
         "cakephp/acl": "dev-master"
     },
     "require-dev": {
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "JcPires\\AclManager\\": "src"
+            "AclManager\\": "src"
         }
     },
     "minimum-stability" : "dev",

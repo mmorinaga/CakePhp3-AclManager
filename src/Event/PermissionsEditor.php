@@ -9,7 +9,7 @@
  * @link     https://github.com/JcPires/CakePhp3-AclManager
  */
 
-namespace JcPires\AclManager\Event;
+namespace AclManager\Event;
 
 use Acl\Controller\Component\AclComponent;
 use Cake\Controller\ComponentRegistry;
@@ -63,9 +63,9 @@ class PermissionsEditor implements EventListenerInterface
      */
     public function addAro(Event $event)
     {
-        $Aro = $event->data['Aro'];
-        $Parent = $event->data['Parent'];
-        $Model = $event->data['Model'];
+        $Aro = $event->getData('Aro');
+        $Parent = $event->getData('Parent');
+        $Model = $event->getData('Model');
         $node = $this->Acl->Aro->node($Aro)->first();
         $node->parent_id = $Parent;
         if ($this->Acl->Aro->save($node)) {
@@ -108,8 +108,8 @@ class PermissionsEditor implements EventListenerInterface
      */
     public function editPerms(Event $event)
     {
-        $Aro = $event->data['Aro'];
-        $datas = $event->data['datas'];
+        $Aro = $event->getData('Aro');
+        $datas = $event->getData('datas');
         foreach ($datas as $path => $data) {
             try {
                 $this->AclManager->node($path);

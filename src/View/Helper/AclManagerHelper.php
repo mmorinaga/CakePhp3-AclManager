@@ -1,5 +1,5 @@
 <?php
-namespace JcPires\AclManager\View\Helper;
+namespace AclManager\View\Helper;
 
 use Acl\Controller\Component\AclComponent;
 use App\Model\Entity\Group;
