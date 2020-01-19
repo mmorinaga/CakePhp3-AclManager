@@ -8,12 +8,12 @@
 ## Install
 
 ```
-    Composer require jcpires/cakephp3-aclmanager
+    Composer require mmorinaga/cakephp3-aclmanager
 ```
 or on composer.json
 
 ```
-    "jcpires/cakephp3-aclmanager": "dev-master"
+    "mmorinaga/cakephp3-aclmanager": "dev-master"
 ```
 
 ### Requirements
@@ -30,7 +30,7 @@ First you need to build your acos, to do, you need to add this lines where you w
 *   By an event:
 
     ```
-        use JcPires\AclManager\Event\PermissionsEditor;
+        use AclManager\Event\PermissionsEditor;
     ```
 
     ```
@@ -42,7 +42,7 @@ First you need to build your acos, to do, you need to add this lines where you w
 *   By the component
 
     ```
-        $this->loadComponent('JcPires/AclManager.AclManager');
+        $this->loadComponent('AclManager.AclManager');
         $this->AclManager->acosBuilder();
     ```
 
@@ -56,7 +56,7 @@ NB: !!! Don't forget to delete those lines after building !!!
 On your Admin/GroupsController.php
 
 ```
-    use JcPires\AclManager\Event\PermissionsEditor;
+    use AclManager\Event\PermissionsEditor;
 ```
 
 Add basics permissions, on your action add
@@ -87,7 +87,7 @@ Add basics permissions, on your action add
     we need to get all acos "not really necessary is just an automatic array builder":
 
     ```
-        $this->loadComponent('JcPires/AclManager.AclManager');
+        $this->loadComponent('AclManager.AclManager');
         $EditablePerms = $this->AclManager->getFormActions();
     ```
 
@@ -130,7 +130,7 @@ Add basics permissions, on your action add
     ```
         public $helpers = [            
                 'AclManager' => [
-                            'className' => 'JcPires/AclManager.AclManager'
+                            'className' => 'AclManager.AclManager'
                         ]
             ];
 
